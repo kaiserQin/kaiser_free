@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>考试系统</title>
+<style type="text/css">
+<!--
+*{ padding:0; margin:0;}
+h1{	line-height:50px; font-size:27px; margin-left:10px;}
+body{ font-family:"黑体", System, "宋体", Arial, "MS Serif";}
+#main{
+	height:250px;
+	width:300px;
+	background:;
+	margin:100px auto;
+	}
+#loginBar{
+	background:url(images/loginBar.gif) no-repeat;
+	height:155px;
+	width:280px;
+	padding:20px 10px;
+	color:#FFF;
+	position:inherit;
+	}
+#user,#pwd{
+	height:18px;
+	width:160px;
+	padding:2px 10px 0px 10px;
+	background:url(images/input.gif);
+	border:none;
+	}
+#wrap{
+	height:30px;
+	width:150px;
+	margin:20px 0 0 120px;
+	}
+button{
+	height:30px;
+	width:100px;
+	text-align:center;
+	background:url(images/btn.gif);
+	border:none;
+	margin:30px 0 0 170px;
+	_margin-top:23px;
+	color:#FFF;
+	font-size:20px;}
+-->
+</style>
+</head>
+<script type="text/javascript" src="js/jquery_v1.4.2.js"></script>
+<script type="text/javascript">
+$(function(){
+
+	$('button').hover(function(){
+		$(this).css('background','url(images/btn_hover.gif)');
+	},function(){
+		$(this).css('background','url(images/btn.gif)');
+	});
+
+})
+</script>
+<body>
+
+<div id="main">
+	<h1>英语考试系统登录</h1>
+    <form id="loginBar" method="post" action="#"> 
+    	<span>用户名：</span>
+      	<input id="user" type="text"><br/><br/>
+        <span>&nbsp;&nbsp;密码：</span>
+        <input id="pwd" type="password"><br/>
+        <div id="wrap">
+            <label for="s">
+            	<input type="radio" id="s" name="type" checked="checked" value="student" />学生
+            </label>
+            <label for="t">
+                <input type="radio" id="t" name="type" value="teacher" />教师
+            </label>
+        </div>
+        <button type="submit">Next</button>
+    </form>
+</div>
+
+</body>
+</html>
